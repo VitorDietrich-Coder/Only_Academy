@@ -3,6 +3,7 @@ import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
+  SectionList,
   StatusBar,
   StyleSheet,
   Text,
@@ -80,6 +81,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+  },
+  SectionList: {
     fontSize: 24,
     fontWeight: '600',
   },
