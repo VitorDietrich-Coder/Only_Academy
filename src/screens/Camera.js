@@ -3,7 +3,6 @@ import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 
 export default function CameraScreen({ navigation }) {
-  const [facing, setFacing] = useState('back');
   const [permission, requestPermission] = useCameraPermissions();
 
   if (!permission) {
@@ -25,7 +24,7 @@ export default function CameraScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <CameraView style={styles.camera} facing={facing}>
+      <CameraView style={styles.camera}>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={toggleCameraFacing}>
             <Text style={styles.text}>Flip Camera</Text>
