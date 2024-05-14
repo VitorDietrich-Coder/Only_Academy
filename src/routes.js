@@ -3,14 +3,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import AppTab from "./components/tab";
-
 import Login from "./screens/Login";
 import Loading from "./screens/Loading";
 import Register from "./screens/Register";
 import Post from "./screens/Post";
 import Contacts from "./screens/Contacts";
-import Profile from "./screens/Profile";
-
+import Cameras from "./screens/Camera";
 import Message from "./components/MessageScreen";
 
 const firebaseConfig = require("./config/firebaseConfig");
@@ -36,6 +34,7 @@ export default function App() {
         <Stack.Screen name="Post" component={Post} />
         <Stack.Screen name="Message" component={Message} />
         <Stack.Screen name="Contacts" component={Contacts} />
+        <Stack.Screen name="Camera" component={Cameras} />
       </Stack.Navigator>
     </NavigationContainer>
   );
